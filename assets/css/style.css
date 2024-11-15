@@ -5,6 +5,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 .container {
@@ -387,80 +388,86 @@ body {
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(to right, #1a1c20, #2c3e50);
+    background: linear-gradient(to right, #2c3e50, #3498db);
     color: #fff;
-    padding: 1.5rem 0;
-    margin-top: 3rem;
-    position: relative;
+    padding: 2rem 0;
+    margin-top: auto;
+    width: 100%;
 }
 
 .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .footer-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .footer-links a {
     color: #fff;
     text-decoration: none;
-    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-links a i {
+    font-size: 1.2rem;
 }
 
 .footer-links a:hover {
-    color: #0d6efd;
+    color: #f1c40f;
     transform: translateY(-2px);
 }
 
-.copyright {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.footer .social-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.footer .social-links a {
+.social-links a {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
-.footer .social-links a:hover {
-    color: #0d6efd;
-    transform: scale(1.2);
+.social-links a:hover {
+    color: #f1c40f;
+    transform: scale(1.1);
 }
 
-/* Adjust main container for footer */
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.main-content {
-    flex: 1;
-}
-
+/* Responsive Footer */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
     }
-    
+
     .footer-links {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
     }
+}
+
+/* Main Content Wrapper */
+.main-content {
+    flex: 1 0 auto;
+    padding: 2rem 0;
+}
+
+/* Ensure body takes full height */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 } 
